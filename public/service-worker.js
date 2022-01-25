@@ -1,4 +1,4 @@
-console.log("hi");
+console.log("Servive worker");
 
 
 var CACHE_NAME = 'my-site-cache-v2';

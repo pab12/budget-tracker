@@ -1,14 +1,7 @@
 // create variable to hold db connection
-let db;
-// establish a connection to IndexDB database
-const request = indexDB.open('budget', 1);
-
-// request.onupgradeneeded = function(event) {
-//   // save a reference to the database
-//   const db = event.target.result;
-  
-//   // db.createObjectStore('')
-// }
+// let db;
+// // establish a connection to IndexDB database
+// const request = indexDB.open('budget', 1);
 
 let db;
 const request = indexedDB.open('budget-tracker', 1);
@@ -70,7 +63,7 @@ function uploadBudget() {
           }
 
           const transaction = db.transaction(['new_budget'], 'readwrite');
-          const pizzaObjectStore = transaction.objectStore('new_budget');
+          const budgetObjectStore = transaction.objectStore('new_budget');
           // clear all items in your store
           budgetObjectStore.clear();
         })
